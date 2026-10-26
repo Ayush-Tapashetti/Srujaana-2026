@@ -1,0 +1,16 @@
+.env
+*.env
+!.env.example
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+node_modules/
+dist/
+.DS_Store
+
+# Large test inputs, recreated by: python -m tests.fixtures.build_fixtures
+server/tests/fixtures/chats/generated/

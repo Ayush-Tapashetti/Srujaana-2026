@@ -1,0 +1,64 @@
+# Handshake to Contract: three containers.
+#   db      PostgreSQL 16
+#   server  FastAPI on :8000   (API docs at http://localhost:8000/docs)
+#   client  Vite + React on :5173 (open this one in the browser)
+#
+# Start:   docker compose up --build
+# Stop:    Ctrl+C, then docker compose down
+# Reset:   docker compose down -v   (wipes the database; needed after model changes)
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: handshake
+      POSTGRES_PASSWORD: handshake
+      POSTGRES_DB: handshake
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      # The API must not start before Postgres accepts connections.
+      test: ["CMD-SHELL", "pg_isready -U handshake -d handshake"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  server:
+    build: ./server
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    env_file:
+      # Your API keys. Optional: without it the app runs, but cannot call the AI model.
+      - path: .env
+        required: false
+    environment:
+      # Always points at the db container, whatever .env says.
+      DATABASE_URL: postgresql+psycopg://handshake:handshake@db:5432/handshake
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./server:/app
+    depends_on:
+      db:
+        condition: service_healthy
+
+  client:
+    build: ./client
+    command: npm run dev -- --host 0.0.0.0
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # The browser calls /api; Vite forwards it to the server container.
+      VITE_API_PROXY: http://server:8000
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    depends_on:
+      - server
+
+volumes:
+  pgdata:
