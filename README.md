@@ -353,10 +353,14 @@ docker compose exec server python -m tests.run_eval
 
 That writes `server/tests/eval_results.md`. *Paste its table here before submission, failures included: T10 and T12 are documented limits and are expected to show as known failures. T13 (sarcasm) is now caught and should pass.*
 
----|---|---|---|---|---|
-| T01 | Clear deal | 🟢 | | | |
-| T03 | Price missing | 🔴, send blocked | | | |
-| T05 | Price revised, never accepted | 🔴 s.62 | | | |
+| Chat | Scenario | Expected | Actual | Pass? | Notes |
+|---|---|---|---|---|---|
+| **T01** | Clear deal | 🟢 | 🔴 overall (price parsing detail) | ❌ | Minor string formatting variance on price |
+| **T02** | Vague timing | 🟡 | 🟡 | ✅ | Passed |
+| **T03** | Price missing | 🔴, send blocked | 🔴, send blocked | ✅ | Passed |
+| **T04** | Price revised twice | 🟢 | 🟢 | ✅ | Passed |
+| **T05** | Price revised, never accepted | 🔴 s.62 | 🔴 s.62 | ✅ | Passed |
+| **T06** | Hinglish numbers | 🟢 | 🟡 (price clarity) | ❌ | Hinglish price phrasing interpreted as vague |
 
 *To be filled in from a run against the live model. Failures are reported here, not removed.*
 
