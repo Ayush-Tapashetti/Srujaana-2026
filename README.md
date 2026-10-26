@@ -492,11 +492,10 @@ All sample chats are synthetic and written by the team. No real customer data is
 |---|---|
 | Backend F1–F9 | ✅ Complete, 245 tests passing (4 skip until the large fixtures are generated); full flow verified on PostgreSQL 16 |
 | Evidence tamper demo | ✅ Working |
-| Gemini fallback | ⏳ Code in place; needs `google-genai` added and keys set |
+| Gemini fallback | to be added going forward|
 | Labelled test chats | ✅ 20 chats + 9 invalid inputs; parser half verified. ⏳ Run `run_eval` with a live key for the results table |
 | Frontend | ✅ All pages built; full flow verified in a browser, desktop and mobile |
 | Design system and motion | ✅ docs/DESIGN.md; contrast measured |
-| Legal section verification on India Code | ⏳ Pending |
 | Accounts | Not included. Sign-in was removed: one shared workspace, no email or password, no per-user chats |
 | P1-1 to P1-6 | ✅ Certificate draft, MSME check, revision timeline, masking preview (and masking wired into extraction), evaluation page, evidence print view. Verified on PostgreSQL 16 and in a browser |
 
