@@ -1,0 +1,32 @@
+{
+  "id": "T02",
+  "file": "T02_vague_timing.txt",
+  "scenario": "Vague timing: 'will send soon', 'payment later'",
+  "demonstrates": "Present-but-vague terms are Yellow (s.46, s.55). Yellow warns but allows sending.",
+  "parser": {
+    "participants": [
+      "Arjun Print House",
+      "Meena Textiles"
+    ],
+    "messages": 7,
+    "date_order": "ambiguous",
+    "attachments": 0
+  },
+  "expected": {
+    "overall": "yellow",
+    "terms": {
+      "price": {
+        "status": "clear",
+        "value_contains": "85"
+      },
+      "delivery_date": {
+        "status": "vague"
+      },
+      "payment_due": {
+        "status": "vague"
+      }
+    },
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

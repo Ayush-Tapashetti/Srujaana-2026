@@ -1,0 +1,35 @@
+{
+  "id": "T09",
+  "file": "T09_long_chat_300_messages.txt",
+  "scenario": "Long chat, 300+ messages over months, terms scattered between small talk",
+  "demonstrates": "Windowing: the chat is read in overlapping parts; nothing is lost or duplicated.",
+  "parser": {
+    "participants": [
+      "Nexa Clinics",
+      "Pixelcraft Studio"
+    ],
+    "messages_at_least": 300,
+    "date_order": "day_first",
+    "attachments_at_least": 1
+  },
+  "expected": {
+    "overall": "green",
+    "terms": {
+      "price": {
+        "status": "clear",
+        "value_contains": "82000",
+        "revision_state": "settled"
+      },
+      "payment_due": {
+        "status": "clear",
+        "value_contains": "15 days"
+      },
+      "delivery_date": {
+        "status": "clear",
+        "value_contains": "20 January"
+      }
+    },
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

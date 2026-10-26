@@ -1,0 +1,28 @@
+{
+  "id": "T03",
+  "file": "T03_price_missing.txt",
+  "scenario": "Price never mentioned",
+  "demonstrates": "A missing critical term is Red (Contract Act s.25) and blocks sending.",
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 8,
+    "date_order": "ambiguous",
+    "attachments": 0,
+    "warnings_contain": [
+      "DD/MM"
+    ]
+  },
+  "expected": {
+    "overall": "red",
+    "terms": {
+      "price": {
+        "status": "missing"
+      }
+    },
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

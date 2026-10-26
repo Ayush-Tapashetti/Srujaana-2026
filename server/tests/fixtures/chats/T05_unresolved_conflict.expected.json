@@ -1,0 +1,26 @@
+{
+  "id": "T05",
+  "file": "T05_unresolved_conflict.txt",
+  "scenario": "Price changed and never accepted; the other side replies about something else",
+  "demonstrates": "Contract Act s.62: a change needs both sides. Replying off-topic is not acceptance.",
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 10,
+    "date_order": "day_first",
+    "attachments": 0
+  },
+  "expected": {
+    "overall": "red",
+    "terms": {
+      "price": {
+        "status": "conflicted",
+        "revision_state": "unresolved"
+      }
+    },
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

@@ -1,0 +1,22 @@
+{
+  "id": "T10",
+  "file": "T10_two_deals_one_chat.txt",
+  "scenario": "Two separate deals (chairs and tables) in one chat",
+  "demonstrates": "Known limit. Two prices may be read as one revised price. Documented, not hidden.",
+  "known_failure": true,
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 7,
+    "date_order": "ambiguous",
+    "attachments": 0
+  },
+  "expected": {
+    "overall": "red_or_yellow",
+    "terms": {},
+    "must_not_contain": [],
+    "note": "Acceptable outcomes: two prices flagged as a conflict, or one deal extracted with the other noted as missing. Not acceptable: a blended or invented price."
+  }
+}

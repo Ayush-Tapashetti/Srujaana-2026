@@ -1,0 +1,18 @@
+{
+  "id": "T23",
+  "file": "T23_recap_reply_for_route_b.txt",
+  "scenario": "T01 continued: the owner pasted the recap and the customer replied",
+  "demonstrates": "Route B. Upload this as the 'updated chat' on the agreement page for T01 and pick the message 'Yes, all correct 👍'.",
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 12,
+    "date_order": "day_first",
+    "attachments": 0,
+    "multiline_contains": "Happy to change anything"
+  },
+  "expected": null,
+  "known_failure": false
+}

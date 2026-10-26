@@ -1,0 +1,28 @@
+{
+  "id": "T13",
+  "file": "T13_sarcastic_ok.txt",
+  "scenario": "A sarcastic 'ok' to a price cut",
+  "demonstrates": "Sarcasm is caught. The reply carries an eye-roll emoji and an exaggerated extra demand, so it is not counted as agreement and the price stays unconfirmed (Red) with a flag that says why.",
+  "known_failure": false,
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 4,
+    "date_order": "day_first",
+    "attachments": 0
+  },
+  "expected": {
+    "overall": "red",
+    "terms": {
+      "price": {
+        "value_contains": "3500",
+        "status": "conflicted",
+        "revision_state": "unresolved"
+      }
+    },
+    "must_not_contain": [],
+    "note": "The seller's reply is sarcasm, not agreement. Sarcasm with no emoji, stock phrase or exaggeration can still pass as assent; the confirmation step is the backstop."
+  }
+}

@@ -1,0 +1,85 @@
+[
+  {
+    "id": "X01",
+    "file": "X01_empty.txt",
+    "scenario": "Empty file",
+    "error": {
+      "status": 400,
+      "message_contains": "empty"
+    }
+  },
+  {
+    "id": "X02",
+    "file": "X02_whitespace_only.txt",
+    "scenario": "Only spaces and blank lines",
+    "error": {
+      "status": 400,
+      "message_contains": "empty"
+    }
+  },
+  {
+    "id": "X03",
+    "file": "X03_not_a_chat.txt",
+    "scenario": "A text file that is not a WhatsApp export",
+    "error": {
+      "status": 400,
+      "message_contains": "No WhatsApp messages"
+    }
+  },
+  {
+    "id": "X04",
+    "file": "X04_impossible_date.txt",
+    "scenario": "A date that cannot exist (31 February)",
+    "error": {
+      "status": 400,
+      "message_contains": "date"
+    }
+  },
+  {
+    "id": "X05",
+    "file": "X05_inconsistent_dates.txt",
+    "scenario": "Dates that fit neither DD/MM nor MM/DD",
+    "error": {
+      "status": 400,
+      "message_contains": "inconsistent"
+    }
+  },
+  {
+    "id": "X06",
+    "file": "X06_wrong_type.csv",
+    "scenario": "Wrong file type (.csv)",
+    "error": {
+      "status": 400,
+      "message_contains": ".txt"
+    }
+  },
+  {
+    "id": "X07",
+    "file": "X07_wrong_type.pdf",
+    "scenario": "Wrong file type (.pdf)",
+    "error": {
+      "status": 400,
+      "message_contains": ".txt"
+    }
+  },
+  {
+    "id": "X08",
+    "file": "generated/X08_oversized.txt",
+    "generate": "oversized",
+    "scenario": "A file over the 2 MB limit",
+    "error": {
+      "status": 413,
+      "message_contains": "larger than"
+    }
+  },
+  {
+    "id": "X09",
+    "file": "generated/X09_too_many_messages.txt",
+    "generate": "too_many",
+    "scenario": "More than 5,000 messages",
+    "error": {
+      "status": 400,
+      "message_contains": "limit"
+    }
+  }
+]

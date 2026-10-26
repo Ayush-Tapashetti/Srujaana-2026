@@ -1,0 +1,26 @@
+{
+  "id": "T12",
+  "file": "T12_group_chat.txt",
+  "scenario": "Group chat with three people: owner, customer, customer's accountant",
+  "demonstrates": "Known limit. The app warns that it can't tell which two people are the parties.",
+  "known_failure": true,
+  "parser": {
+    "participants": [
+      "Priya Accounts",
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 7,
+    "date_order": "day_first",
+    "attachments": 0,
+    "warnings_contain": [
+      "3 participants"
+    ]
+  },
+  "expected": {
+    "overall": "any",
+    "terms": {},
+    "must_not_contain": [],
+    "note": "Pass = the 3-participant warning is shown. Party extraction may be wrong."
+  }
+}

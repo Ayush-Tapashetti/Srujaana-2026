@@ -1,0 +1,24 @@
+{
+  "id": "T16",
+  "file": "T16_ambiguous_dates.txt",
+  "scenario": "Every date fits both DD/MM and MM/DD",
+  "demonstrates": "The parser admits uncertainty: assumes DD/MM (Indian default) and says so.",
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 4,
+    "date_order": "ambiguous",
+    "attachments": 0,
+    "warnings_contain": [
+      "DD/MM"
+    ]
+  },
+  "expected": {
+    "overall": "green",
+    "terms": {},
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

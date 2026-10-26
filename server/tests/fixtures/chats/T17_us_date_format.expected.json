@@ -1,0 +1,22 @@
+{
+  "id": "T17",
+  "file": "T17_us_date_format.txt",
+  "scenario": "A phone set to US format (MM/DD/YY)",
+  "demonstrates": "One date with a day above 12 settles the format for the whole file.",
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 4,
+    "date_order": "month_first",
+    "attachments": 0,
+    "first_timestamp": "2024-09-14T10:00:00"
+  },
+  "expected": {
+    "overall": "green",
+    "terms": {},
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "purpose": "F7 guidance only. The app calculates no duty (D5).",
+    "note": "duty_rate is deliberately null everywhere. A rate goes in only after a team member reads it off the state's own official schedule and records the date here. A wrong number is worse than no number.",
+    "last_verified": "2026-10-24"
+  },
+
+  "general_effect": {
+    "headline": "An unstamped agreement is usually not void, but a court may refuse to look at it until the duty and any penalty are paid.",
+    "points": [
+      {
+        "text": "An instrument that requires stamping and is not duly stamped is not admissible in evidence.",
+        "statute": "Indian Stamp Act, 1899",
+        "section": "s.35"
+      },
+      {
+        "text": "A court or public officer must impound an instrument that appears to be insufficiently stamped.",
+        "statute": "Indian Stamp Act, 1899",
+        "section": "s.33"
+      },
+      {
+        "text": "Short payment or non-payment is a curable defect: the instrument becomes admissible once the duty and penalty are paid.",
+        "statute": "Indian Stamp Act, 1899",
+        "section": "s.42"
+      },
+      {
+        "text": "A seven-judge bench held in December 2023 that unstamped or insufficiently stamped agreements are inadmissible rather than void, and that the defect is curable.",
+        "statute": "In re: Interplay between Arbitration Agreements and the Indian Stamp Act, 1899",
+        "section": "2023 SCC OnLine SC 1666"
+      }
+    ],
+    "plain_language": "Not stamping does not cancel your agreement. It means that if you ever need to rely on it in court, you may have to pay the duty plus a penalty first before the court will accept it.",
+    "checklist": [
+      "Decide the instrument type with your state's stamp authority or a lawyer. An agreement for supply of goods is usually not the same instrument as a lease or a conveyance.",
+      "Buy the stamp before or at the time of execution where the state requires it.",
+      "Use the e-stamping route if your state offers it, and keep the certificate with the agreement.",
+      "If the agreement is already signed and unstamped, ask about the procedure to pay duty with penalty."
+    ],
+    "estamping": {
+      "available_since": 2013,
+      "operator": "Stock Holding Corporation of India (SHCIL)",
+      "note": "Availability and the exact route differ by state. Check your state's stamp authority."
+    }
+  },
+
+  "states": {
+    "KA": {
+      "name": "Karnataka",
+      "state_act": "Karnataka Stamp Act, 1957",
+      "authority": "Department of Stamps and Registration, Government of Karnataka",
+      "source_url": "https://kaverionline.karnataka.gov.in/",
+      "duty_rate": null,
+      "rate_note": "Not filled in. Read the current rate for the correct article of the Karnataka Stamp Act schedule and record it here with the date you checked it.",
+      "estamping_available": true,
+      "last_verified": "2026-10-24"
+    },
+    "MH": {
+      "name": "Maharashtra",
+      "state_act": "Maharashtra Stamp Act, 1958",
+      "authority": "Department of Registration and Stamps, Government of Maharashtra",
+      "source_url": "https://igrmaharashtra.gov.in/",
+      "duty_rate": null,
+      "rate_note": "Not filled in. Read the current rate for the correct article of the Maharashtra Stamp Act schedule and record it here with the date you checked it.",
+      "estamping_available": true,
+      "last_verified": "2026-10-24"
+    }
+  },
+
+  "unsupported_state_message": "We only cover Karnataka and Maharashtra in this prototype. For any other state, check with your state stamp authority or a lawyer. We will not guess a rate or an instrument type."
+}

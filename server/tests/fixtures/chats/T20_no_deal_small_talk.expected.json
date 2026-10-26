@@ -1,0 +1,31 @@
+{
+  "id": "T20",
+  "file": "T20_no_deal_small_talk.txt",
+  "scenario": "Only small talk and 'will let you know': no deal was ever made",
+  "demonstrates": "Preliminary talk is not a contract. Every critical term shows as missing; nothing is invented.",
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 5,
+    "date_order": "day_first",
+    "attachments": 0
+  },
+  "expected": {
+    "overall": "red",
+    "terms": {
+      "price": {
+        "status": "missing"
+      },
+      "payment_due": {
+        "status": "missing"
+      },
+      "delivery_date": {
+        "status": "missing"
+      }
+    },
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

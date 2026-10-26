@@ -1,0 +1,20 @@
+{
+  "id": "T21",
+  "file": "T21_one_sided_notes.txt",
+  "scenario": "Only one person writes (an owner's notes, forwarded to themselves)",
+  "demonstrates": "With one identifiable party there is no one to hold to a deal: Red (s.10).",
+  "parser": {
+    "participants": [
+      "Sunrise Furniture"
+    ],
+    "messages": 3,
+    "date_order": "day_first",
+    "attachments": 0
+  },
+  "expected": {
+    "overall": "red",
+    "terms": {},
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

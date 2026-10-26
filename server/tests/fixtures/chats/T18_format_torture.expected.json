@@ -1,0 +1,30 @@
+{
+  "id": "T18",
+  "file": "T18_format_torture.txt",
+  "scenario": "24-hour clock, multi-line messages, emoji, a deleted message, system lines, a colon in text, Windows line endings and a byte-order mark",
+  "demonstrates": "The parser survives everything a real export throws at it.",
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 7,
+    "date_order": "ambiguous",
+    "attachments": 1,
+    "system_messages": 1,
+    "deleted": 1,
+    "multiline_contains": "black only",
+    "last_hour": 21
+  },
+  "expected": {
+    "overall": "green",
+    "terms": {
+      "price": {
+        "status": "clear",
+        "value_contains": "4500"
+      }
+    },
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": "T14",
+  "file": "T14_price_revised_back.txt",
+  "scenario": "Price revised, then revised back to the original, both accepted",
+  "demonstrates": "Boundary pair from TEST_PLAN: the original value is active again, with history kept.",
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 6,
+    "date_order": "day_first",
+    "attachments": 0
+  },
+  "expected": {
+    "overall": "green",
+    "terms": {
+      "price": {
+        "status": "clear",
+        "value_contains": "4500",
+        "revision_state": "settled"
+      }
+    },
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

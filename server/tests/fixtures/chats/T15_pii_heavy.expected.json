@@ -1,0 +1,34 @@
+{
+  "id": "T15",
+  "file": "T15_pii_heavy.txt",
+  "scenario": "A chat full of identifiers: phones, PAN, GSTIN, Aadhaar, email, UPI, plus look-alikes",
+  "demonstrates": "Every identifier is hidden before the AI sees the text; order numbers and prices are not.",
+  "parser": {
+    "participants": [
+      "Kaveri Mills",
+      "Meena Textiles"
+    ],
+    "messages": 7,
+    "date_order": "ambiguous",
+    "attachments": 0,
+    "masked": {
+      "GSTIN": 1,
+      "PAN": 1,
+      "AADHAAR": 1,
+      "EMAIL": 1,
+      "UPI": 1,
+      "PHONE": 2
+    }
+  },
+  "expected": {
+    "overall": "green",
+    "terms": {
+      "price": {
+        "status": "clear",
+        "value_contains": "650"
+      }
+    },
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

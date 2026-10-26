@@ -1,0 +1,38 @@
+{
+  "id": "T01",
+  "file": "T01_clear_deal.txt",
+  "scenario": "Clear deal: scope, price, delivery and payment all stated",
+  "demonstrates": "The happy path. Every critical term present and clear.",
+  "parser": {
+    "participants": [
+      "Ravi Traders",
+      "Sunrise Furniture"
+    ],
+    "messages": 10,
+    "date_order": "ambiguous",
+    "attachments": 0,
+    "system_messages": 1,
+    "warnings_contain": [
+      "DD/MM"
+    ]
+  },
+  "expected": {
+    "overall": "green",
+    "terms": {
+      "price": {
+        "status": "clear",
+        "value_contains": "4500"
+      },
+      "payment_due": {
+        "status": "clear",
+        "value_contains": "30 days"
+      },
+      "delivery_date": {
+        "status": "clear",
+        "value_contains": "15 September"
+      }
+    },
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

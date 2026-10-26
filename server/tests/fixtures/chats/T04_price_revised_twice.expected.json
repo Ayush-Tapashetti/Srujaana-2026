@@ -1,0 +1,28 @@
+{
+  "id": "T04",
+  "file": "T04_price_revised_twice.txt",
+  "scenario": "Price revised twice, and each revision accepted by the other side",
+  "demonstrates": "The latest accepted value wins; earlier values stay in the revision history.",
+  "parser": {
+    "participants": [
+      "Kiran Events",
+      "Lakshmi Printers"
+    ],
+    "messages": 10,
+    "date_order": "ambiguous",
+    "attachments": 0
+  },
+  "expected": {
+    "overall": "green",
+    "terms": {
+      "price": {
+        "status": "clear",
+        "value_contains": "52000",
+        "revision_state": "settled",
+        "revision_count": 2
+      }
+    },
+    "must_not_contain": []
+  },
+  "known_failure": false
+}

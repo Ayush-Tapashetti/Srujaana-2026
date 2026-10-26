@@ -1,0 +1,134 @@
+{
+  "_meta": {
+    "purpose": "Statutory reason shown inline on every flag (F3). Not legal advice.",
+    "verification": "Every section below must be checked on indiacode.nic.in before submission; see the checklist in LEGAL_REFERENCES_AND_COMPETITORS.md.",
+    "last_verified": "2026-10-24",
+    "verified_by": "team"
+  },
+
+  "missing.party": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.10",
+    "gist": "An agreement is a contract when competent parties agree freely for lawful consideration. If it is unclear who the other party is, there is no identifiable person to hold to it.",
+    "why_it_matters": "If a dispute arises you need to name who you dealt with. A first name in a chat is often not enough.",
+    "suggested_question": "Could you confirm the full business name you would like on the agreement?"
+  },
+  "vague.party": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.10",
+    "gist": "The parties to a contract must be identifiable.",
+    "why_it_matters": "A name with no business identity or contact detail is hard to act on later.",
+    "suggested_question": "What is the registered business name and a contact number we should use?"
+  },
+
+  "missing.scope": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.29",
+    "gist": "An agreement whose meaning is not certain, and cannot be made certain, is void.",
+    "why_it_matters": "If what is being supplied was never written down, neither side can prove what was promised.",
+    "suggested_question": "Could you confirm exactly what is being supplied, including quantity and specification?"
+  },
+  "vague.scope": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.29",
+    "gist": "An agreement whose meaning is not certain is void for uncertainty.",
+    "why_it_matters": "Descriptions like \"the usual\" or \"same as last time\" rely on a shared memory that disputes tend to erase.",
+    "suggested_question": "Shall we write out the specification in full so there is no doubt later?"
+  },
+
+  "missing.price": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.25",
+    "gist": "An agreement made without consideration is, with limited exceptions, void.",
+    "why_it_matters": "No price was stated anywhere in this chat. Without an identifiable price there may be no enforceable bargain at all.",
+    "suggested_question": "Could you confirm the agreed rate and the total, so we both have it in writing?"
+  },
+  "vague.price": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.29",
+    "gist": "An agreement whose meaning is not certain is void for uncertainty.",
+    "why_it_matters": "An approximate price, or one where it is unclear whether GST is included, is the most common source of disputes over payment.",
+    "suggested_question": "Is the rate inclusive or exclusive of GST, and what is the final total?"
+  },
+  "conflicted.price": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.62",
+    "gist": "Parties may alter a contract, but a change requires the agreement of both of them. A proposal one side never answered has not altered anything.",
+    "why_it_matters": "A new price was proposed later in this chat and the other side never responded to it. Each side may now believe a different price applies.",
+    "suggested_question": "Just to close this off, which rate are we both working to?"
+  },
+
+  "missing.payment_due": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.46",
+    "gist": "Where no time for performance is specified, the promise must be performed within a reasonable time, and what is reasonable is a question of fact.",
+    "why_it_matters": "With no payment date agreed, \"when is it overdue?\" has no clear answer, which is exactly what makes chasing payment awkward.",
+    "suggested_question": "Shall we put the payment terms in writing, for example within 30 days of delivery?"
+  },
+  "vague.payment_due": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.46",
+    "gist": "Where no time is specified, performance must happen within a reasonable time, decided on the facts.",
+    "why_it_matters": "\"Pay later\" or \"after the next cycle\" gives no date to count from, so nothing is ever formally late.",
+    "suggested_question": "Could we fix a specific number of days from delivery for payment?"
+  },
+  "conflicted.payment_due": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.62",
+    "gist": "Altering a contract requires the agreement of both parties.",
+    "why_it_matters": "The payment terms were changed later in the chat without a reply, so the two sides may be working to different dates.",
+    "suggested_question": "Can we confirm the payment terms we are both working to?"
+  },
+
+  "missing.delivery_date": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.46",
+    "gist": "Where no time for performance is specified, it must be performed within a reasonable time.",
+    "why_it_matters": "With no delivery date, neither side can say when the supplier is late.",
+    "suggested_question": "What delivery date should we record?"
+  },
+  "vague.delivery_date": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.55",
+    "gist": "Where a party fails to perform at a fixed time, and time was essential, the contract becomes voidable at the other party's option.",
+    "why_it_matters": "\"Soon\" or \"next week\" cannot be enforced, and it also means you cannot show that timing mattered.",
+    "suggested_question": "Could we fix an actual delivery date, and note whether that date is firm?"
+  },
+  "conflicted.delivery_date": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.62",
+    "gist": "Altering a contract requires the agreement of both parties.",
+    "why_it_matters": "A revised deadline was proposed and never acknowledged, so both sides may be planning to different dates.",
+    "suggested_question": "Which delivery date are we both working to?"
+  },
+
+  "missing.acceptance": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.37",
+    "gist": "Parties must perform, or offer to perform, their respective promises.",
+    "why_it_matters": "With no quality or acceptance standard, a disagreement about whether the work was done properly has nothing to resolve it.",
+    "suggested_question": "How will we agree that the goods or work have been accepted?"
+  },
+  "missing.cancellation": {
+    "statute": "Indian Contract Act, 1872",
+    "section": "s.74",
+    "gist": "Where a sum is named in the contract as payable on breach, the party complaining is entitled to reasonable compensation not exceeding that amount.",
+    "why_it_matters": "Nothing was agreed about cancellation or late payment, so there is no agreed consequence if either happens.",
+    "suggested_question": "Should we add a short line on what happens if the order is cancelled or payment is late?"
+  },
+  "missing.dispute": {
+    "statute": "Arbitration and Conciliation Act, 1996",
+    "section": "s.7",
+    "gist": "An arbitration agreement can be formed through an exchange of electronic communications.",
+    "why_it_matters": "With no agreed way to resolve a disagreement, the only route left is court, which is slow and costly for a deal this size.",
+    "suggested_question": "Shall we agree to try mediation first if anything goes wrong?"
+  },
+
+  "msme.payment_term_exceeds_45_days": {
+    "statute": "MSMED Act, 2006",
+    "section": "s.15",
+    "gist": "Where a buyer takes supplies from a micro or small enterprise, payment must be made by the agreed date and in no case later than forty-five days from acceptance.",
+    "why_it_matters": "The payment period agreed in this chat is longer than the statutory maximum for a micro or small supplier. A longer term agreed in a contract does not override the statute.",
+    "suggested_question": "Is the supplier registered as a micro or small enterprise under Udyam?"
+  }
+}
